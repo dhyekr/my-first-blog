@@ -4,13 +4,15 @@
 	</head>
 	<body>
 		<div>
-			<h1><a href="">Diane's Blog</h1>
+			<h1><a href="/">Diane's Blog</a></h1>
 		</div>
+		{% for post in posts %}
+			<div>
+				<p>published: {{ post.published_date }}</p>
+				<h1><a href="">{{ post.title }}</a></h1>
+				<p>{{ post.text|linebreaksbr }}</p>
 
-		<div>
-			<p>published: 21.07.2018, 15:23</p>
-			<h2><a href="">My first post</h2>
-			<p>HIC ET NUNC</p>
-		</div>
+			</div>	
+		{% endfor %}
 	</body>
 </html>
